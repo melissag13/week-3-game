@@ -1,6 +1,3 @@
-
-
-  
 // sound 
 
 var audio = new Audio("audio/Halloween_Theme.mp3");
@@ -8,6 +5,8 @@ audio.play();
 
 var audio = new Audio("audio/Happy_Halloween.mp3");
 audio.play();
+
+
 
 // var win = new Audio("audio/Evil_Laugh.mp3");
 // if(playerWon === true){
@@ -55,27 +54,32 @@ audio.play();
       "Haddonfield, Illinois"
     ];
   
-  function mywordBank(e) {
+  function init() {
   var words = wordBank[Math.floor(Math.random()*wordBank.length)];
     console.log(words);
 
-  var choice = String.fromCharCode (e.keyCode).toUpperCase();
+  var answerArray = [];
+  for (var i = 0; i < words.length; i++) {
+      answerArray[i] = "_";
+
+  }
+  document.getElementById("answer").innerHTML= answerArray.join(" ");
+  document.getElementById("message").innerHTML= "Select a letter."
+ 
+ }
+
+init();
+
+
+
+  // var choice = String.fromCharCode (e.keyCode).toUpperCase();
    
     
   
 
-  }
+  // var remainingLetters = words.length;
  // Reset
 
   document.getElementById('reset').onclick = function() {
     
   }
-
-
-
-
-
-
-
-
-
